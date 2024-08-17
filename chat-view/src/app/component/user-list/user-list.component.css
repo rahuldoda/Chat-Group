@@ -1,0 +1,32 @@
+.table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color:   
+   #f2f2f2;
+  }
+  
+  /* Adjust margin and padding for checkbox column as needed */
+  .table td:first-child {
+    padding-left: 20px; /* Adjust padding-left as needed */
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 10px;
+    margin: 0 5px;
+  }

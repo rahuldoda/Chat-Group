@@ -1,0 +1,32 @@
+<div>
+
+    <div class="row">
+        <div class="col-3" >
+          <button class="btn btn-primary" (click)="openAddUserModal()" *ngIf="data&&data.roleId== '1'">Add User</button>
+        </div>
+        <div class="col-3" >
+          <button class="btn btn-secondary" *ngIf="data&&data.roleId=='2'&&selectedItems.length>=1">Create Group</button>
+        </div>
+      </div>
+
+    <div>
+        <table class="table">
+            <thead>
+              <tr>
+                <th></th> <th>User Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of userData">  
+                <td *ngIf="user.role_id == '1'"></td>              
+                <td *ngIf="user.role_id == '2'"><input type="checkbox" (change)="onCheckboxChange(user._id)" [checked]="user.isChecked"></td>
+                <td>{{ user._id }}{{user.roleId}}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
